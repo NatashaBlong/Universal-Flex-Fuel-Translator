@@ -24,7 +24,7 @@ byte PLXpacket[7] {0x80, 0x00, 0x11, 0x00, 0x00, 0x00, 0x40};
 
 void setup() {
   pinMode (3, OUTPUT);
-  FreqMeasure.begin();
+  FreqMeasure.begin(); //Begin frequency measurement
   Serial.begin(19200);
   //P0 = millis(); // For Bluetooth
   E_scalar = (E85 - E0) / 85;
@@ -32,11 +32,13 @@ void setup() {
 
 void loop() {
   if (FreqMeasure.available()) {
-    // average several readings together
-    sum = sum + FreqMeasure.read();
+    //Returns the number of measurements available to read, or 0 (false) if none are unread. Average several readings together
+    sum = sum + FreqMeasure.read(); 
+    //An unsigned long (32 bits) containing the number of CPU clock cycles that elapsed during one cycle of the waveform. 
+    //Each measurement begins immediately after the prior one without any delay, so several measurements may be averaged together for better resolution.
     count = count + 1;
     if (count > 30) {
-      freq = FreqMeasure.countToFrequency(sum / count);
+      freq = FreqMeasure.countToFrequency(sum / count); //Convert the 32 bit unsigned long numbers to actual frequency.
       sum = 0;
       count = 0;
     }
@@ -51,7 +53,7 @@ void loop() {
   }
   ethanol_int = (int)ethanol;
 
-  V_out = 0.5 + (0.04 * ethanol); // 0.5V-4.5V = 4V, 0.04 V increase for every 1% ethanol increase (0.04/4 = 1/100)
+  V_out = 0.5 + (0.04 * ethanol); // 0.5V-4.5V = 4V, 0.04 V increase for every 1% ethanol increase (0.04/4V == 1/100E)
   V_out = 51 * V_out; //scale to 255
   V_out_int = (int)V_out; //convert to integer for analogWrite
 
