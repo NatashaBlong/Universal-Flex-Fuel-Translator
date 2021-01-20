@@ -14,7 +14,11 @@ https://github.com/NatashaBlong/Universal-Flex-Fuel-Translator/blob/main/A%20How
 
 == Credits:
 
-Check out the FreqMeasure Library created by Paul Stoffregen and used in this project -> https://www.arduinolibraries.info/libraries/freq-measure
+Check out the FreqMeasure Library, created by Paul Stoffregen, and used in this project -> https://www.arduinolibraries.info/libraries/freq-measure
+
+== Resources for Future Updates:
+Serial Information for BlueTooth (not yet tested) -> https://www.arduino.cc/reference/en/language/functions/communication/serial/
+The Continental Ethanol Content Sensor also outputs the fuel temperature through a 1-5 millisecond pulsewidth (-40 - 125 C) -> https://www.bmotorsports.com/shop/product_info.php/xrf/gshp/products_id/3408
 
 == Step 3: Load the code
 
