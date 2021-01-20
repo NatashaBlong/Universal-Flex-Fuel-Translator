@@ -24,10 +24,10 @@ Upload the code contained in this sketch on to your board
 
 ....
  sketch123                => Arduino sketch folder
-  ├── sketch123.ino       => main Arduino file -> https://github.com/NatashaBlong/Universal-Flex-Fuel-Translator/blob/main/Flex_Fuel_Translator.ino
-  ├── schematics.png      => schematic -> https://github.com/NatashaBlong/Universal-Flex-Fuel-Translator/blob/main/Flex%20Fuel%20Translator%20Schematic%20(Arduino%20Nano).png
-  ├── A How To Guide.pdf  => A How to Guide -> https://github.com/NatashaBlong/Universal-Flex-Fuel-Translator/blob/main/A%20How%20To%20Guide.pdf
-  └── ReadMe.adoc         => this file
+  ├── Flex_Fuel_Translator.ino                               => main Arduino file 
+  ├── Flex Fuel Translator Schematic (Arduino Nano).png      => schematic
+  ├── A How To Guide.pdf                                     => A How to Guide
+  └── ReadMe.adoc                                            => this file
 ....
 
 === Contributing
