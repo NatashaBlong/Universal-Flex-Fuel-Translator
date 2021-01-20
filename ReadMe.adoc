@@ -19,7 +19,7 @@ Check out the FreqMeasure Library, created by Paul Stoffregen, and used in this 
 == Resources for Future Updates:
 Serial Information for BlueTooth (not yet tested) -> https://www.arduino.cc/reference/en/language/functions/communication/serial/
 
-The Continental Ethanol Content Sensor also outputs the fuel temperature through a 1-5 millisecond pulsewidth (-40 - 125 C) -> https://www.bmotorsports.com/shop/product_info.php/xrf/gshp/products_id/3408
+The Continental Ethanol Content Sensor also outputs the fuel temperature through a 1-5 millisecond pulsewidth (-40 - 125 C) -> https://www.bmotorsports.com/shop/product_info.php/xrf/gshp/products_id/3408 Conversion Formula: C = [ 41.25 * Pulsewidth (ms) ] - 81.25
 
 == Step 3: Load the code
 
